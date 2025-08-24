@@ -40,7 +40,7 @@ function App() {
           <Navigasi />
           <Routes>
             <Route path="/" element={<TVScreen><Home /></TVScreen>} />
-            <Route path="/gallery" element={<TVScreen><Gallery /></TVScreen>} />
+            <Route path="/gallery" element={<TVScreen><Gallery bend={2} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} /></TVScreen>} />
             {/* <Route path="/surat" element={<TVScreen><Surat /></TVScreen>} /> */}
           </Routes>
         </BrowserRouter>
