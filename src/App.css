@@ -40,3 +40,44 @@
 .read-the-docs {
   color: #888;
 }
+.glitch {
+  position: relative;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  animation: glitch 1s infinite linear alternate-reverse;
+}
+.glitch:before,
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.glitch:before {
+  left: 2px;
+  text-shadow: -2px 0 red;
+  animation: glitchTop 1s infinite linear alternate-reverse;
+}
+.glitch:after {
+  left: -2px;
+  text-shadow: -2px 0 blue;
+  animation: glitchBottom 1s infinite linear alternate-reverse;
+}
+@keyframes glitch {
+  0% { text-shadow: 2px 0 red, -2px 0 blue; }
+  20% { text-shadow: -2px 0 red, 2px 0 blue; }
+  40% { text-shadow: 2px 2px red, -2px -2px blue; }
+  60% { text-shadow: -2px 2px red, 2px -2px blue; }
+  80% { text-shadow: 2px -2px red, -2px 2px blue; }
+  100% { text-shadow: -2px -2px red, 2px 2px blue; }
+}
+@keyframes glitchTop {
+  0% { clip-path: inset(0 0 80% 0); }
+  100% { clip-path: inset(0 0 10% 0); }
+}
+@keyframes glitchBottom {
+  0% { clip-path: inset(80% 0 0 0); }
+  100% { clip-path: inset(10% 0 0 0); }
+}

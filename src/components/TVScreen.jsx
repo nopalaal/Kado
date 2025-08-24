@@ -7,8 +7,14 @@ export default function TVScreen({ children }) {
         {/* TV content */}
         {children}
         {/* TV frame effect */}
-        <div className="absolute top-0 left-0 w-full h-full pointer-events-none rounded-3xl border-4 border-purple-400"></div>
+        <div className="absolute p-5 top-0 left-0 w-full h-full pointer-events-none rounded-3xl border-4 border-purple-400"></div>
+        {/* Lampu indikator */}
+<div className="absolute bottom-3 right-6 w-4 h-4 bg-red-500 rounded-full shadow-lg"></div>
+{/* Logo TV */}
+<div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 text-purple-400 font-bold text-xs">UnguJanda</div>
       </div>
+      {/* Kaki TV */}
+<div className="w-24 h-4 bg-purple-700 rounded-b-lg mt-2 shadow-lg"></div>
     </div>
   );
 }

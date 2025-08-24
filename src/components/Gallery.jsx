@@ -297,7 +297,7 @@ class App {
     {
       items,
       bend,
-      textColor = "#ffffff",
+      textColor = "#030303",
       borderRadius = 0,
       font = "bold 30px Figtree",
       scrollSpeed = 2,
@@ -470,7 +470,7 @@ class App {
 export default function CircularGallery({
   items,
   bend = 3,
-  textColor = "#ffffff",
+  textColor = "#030303",
   borderRadius = 0.05,
   font = "bold 30px Figtree",
   scrollSpeed = 2,
@@ -487,7 +487,7 @@ export default function CircularGallery({
     };
   }, [items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase]);
   return (
-    <div className="w-full h-full overflow-hidden cursor-grab active:cursor-grabbing bg-purple-200" ref={containerRef}>
+    <div className="w-full h-full overflow-hidden cursor-grab active:cursor-grabbing bg-purple-300" ref={containerRef}>
       {!showGrid ? (
         <button
           className="px-6 py-2 bg-pink-500 text-white rounded-lg shadow hover:bg-pink-600 transition"
@@ -496,7 +496,7 @@ export default function CircularGallery({
           View Gallery
         </button>
       ) : (
-        <div className="grid grid-cols-3 grid-rows-3 gap-2 w-full max-w-2xl auto-rows-[150px]">
+        <div className="grid grid-cols-3 grid-rows-3 ">
           {items.map(item => (
             <div key={item.id} className={`bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center justify-center ${item.className}`}>
               <img src={item.src} alt={item.title} className="object-cover w-full h-full" />
