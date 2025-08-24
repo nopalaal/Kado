@@ -4,7 +4,10 @@ import {Link} from 'react-router-dom';
 export default function Home(){
     return(
         <>
-        <h1>testing home</h1>
+        <div className="bg-amber-200 border-solid">
+
+        <h1 className="">testing home</h1>
+        </div>
         </>
     );
 }

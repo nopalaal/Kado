@@ -6,9 +6,11 @@ import SurpriseScreen from './components/SurpriseScreen'
 import Navigasi from './components/Navigasi'
 import Home from './components/Home'
 import Gallery from './components/Gallery'
+import TVScreen from './components/TVScreen';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Waves from './components/Waves'
 function App() {
-  const [showSurprise, setShowSurprise] = useState(true);
+  const [showSurprise, setShowSurprise] = useState(false);
   const initialText = "Hello seng";
   const revealTexts = [
     "kalo kamu liat ini tandanya apa...",
@@ -34,12 +36,12 @@ function App() {
         />
       ) : (<>
         <BrowserRouter>
+        <Waves></Waves>
           <Navigasi />
           <Routes>
-            <Route path="/" element={<Home />} />
-            {/* Tambahkan Route lain di sini, misal: */}
-            <Route path="/gallery" element={<Gallery />} />
-            {/* <Route path="/surat" element={<Surat />} /> */}
+            <Route path="/" element={<TVScreen><Home /></TVScreen>} />
+            <Route path="/gallery" element={<TVScreen><Gallery /></TVScreen>} />
+            {/* <Route path="/surat" element={<TVScreen><Surat /></TVScreen>} /> */}
           </Routes>
         </BrowserRouter>
       </>
