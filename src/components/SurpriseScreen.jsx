@@ -33,7 +33,7 @@ const SurpriseScreen = ({ initialText, revealTexts, onFinish }) => {
       <h1 className="text-3xl font-bold mb-8 animate-fadeIn">{step === 0 ? initialText : revealTexts[step - 1]}</h1>
       {step === 0 && (
         <button
-          className="px-6 py-2 bg-white hover:bg-gray-200 transition"
+          className="px-6 py-2 bg-gray-300 hover:bg-gray-200 transition text-black rounded-2xl"
           onClick={handleReveal}
         >
           Tampilkan Pesan

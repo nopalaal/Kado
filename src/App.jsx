@@ -13,17 +13,17 @@ import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom'
 import Waves from './components/Waves'
 import Seemore from './components/Seemore'
 function App() {
-  const [showSurprise, setShowSurprise] = useState(false);
-  const [isFading, setIsFading] = useState(true);
-  const [showMain, setShowMain] = useState(true);
+  const [showSurprise, setShowSurprise] = useState(true);
+  const [isFading, setIsFading] = useState(false);
+  const [showMain, setShowMain] = useState(false);
   const initialText = "Hello seng";
   const revealTexts = [
     "kalo kamu liat ini tandanya apa...",
-    // "iyaa betul sekali aku eh maksudnya kamu ultah hehe",
-    // "Happy Birthday yaaaaaaa 🥳🥳🥳",
-    // "Sehat selalu dan bisa menjadi melisa yang lebih baik lagii",
-    // "Semoga kamu senang ama inii",
-    // ""
+    "iyaa betul sekali aku eh maksudnya kamu ultah hehe",
+    "Happy Birthday yaaaaaaa 🥳🥳🥳",
+    "Sehat selalu dan bisa menjadi melisa yang lebih baik lagii",
+    "Semoga kamu senang ama inii",
+  
   ];
 
   const handleFinish = () => {
@@ -33,7 +33,7 @@ function App() {
     setTimeout(() => {
       setShowSurprise(false);
       setIsFading(false);
-    }, 600); 
+    }, 1000); 
   };
 
   return (

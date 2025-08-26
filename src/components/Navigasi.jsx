@@ -24,7 +24,7 @@ export default function Navigasi(){
                             </Link>
                         ))}
                         <Link to="/surat" className="shrink-0 h-9 w-9 rounded-full bg-zinc-800 hover:bg-zinc-700 active:scale-95 transition flex items-center justify-center text-sm">0</Link>
-                        <Link to="/" className="shrink-0 h-9 px-4 rounded-full bg-purple-600 hover:bg-purple-500 active:scale-95 transition flex items-center justify-center text-xs">Back</Link>
+                        <Link to="/" className="shrink-0 h-9 px-4 rounded-full bg-purple-600 text-white hover:bg-purple-500 active:scale-95 transition flex items-center justify-center text-xs">Back</Link>
                     </div>
                 ) : (
                     <div className="flex items-center gap-2 overflow-x-auto">

@@ -45,7 +45,7 @@
   color: #fff;
   font-size: 2.5rem;
   font-weight: bold;
-  animation: glitch 1s infinite linear alternate-reverse;
+  animation: glitch 3s infinite linear alternate-reverse;
 }
 .glitch:before,
 .glitch:after {
