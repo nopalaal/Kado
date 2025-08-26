@@ -14,7 +14,7 @@ import memory9 from '../assets/memory (10).jpeg'
 import memory10 from '../assets/memory (2).jpeg'
 import memory11 from '../assets/memory (6).jpeg'
 import memory12 from '../assets/memory(3).jpeg'
-
+import memory13 from '../assets/hape (3).jpeg'
 
 
 function debounce(func, wait) {
@@ -362,6 +362,7 @@ class App {
       { image: memory10, text: "cantik banget asliefauofefnaepif" },
       { image: memory11, text: "anak seniman" },
       { image: memory12, text: "foto kita hehe" },
+      { image: memory13, text: "dingin sekali" },
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);
@@ -492,7 +493,7 @@ export default function CircularGallery({
     };
   }, [items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase]);
   return (
-    <div className="w-full h-[500px] flex flex-col items-center justify-center bg-purple-300">
+    <div className="w-full h-[500px] flex flex-col items-center justify-center bg-purple-300 p-6 pt-8 pb-12">
       <button
         className="px-6 py-2 bg-pink-500 text-white rounded-lg shadow hover:bg-pink-600 transition "
         onClick={() => navigate("/seemore")}
@@ -500,7 +501,7 @@ export default function CircularGallery({
        View more
       </button>
       <div
-        className="w-full h-full overflow-hidden cursor-grab active:cursor-grabbing"
+        className="w-full h-full overflow-hidden rounded-lg cursor-grab active:cursor-grabbing mt-4"
         ref={containerRef}
       >
       </div>

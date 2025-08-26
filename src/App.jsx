@@ -57,6 +57,7 @@ function App() {
               <Route path="/" element={<TVScreen><Home /></TVScreen>} />
               <Route path="/gallery" element={<TVScreen><Gallery bend={2} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} /></TVScreen>} />
               <Route path="/surat" element={<TVScreen><Surat /></TVScreen>} />
+              <Route path="/surat/:id" element={<TVScreen><Surat /></TVScreen>} />
               <Route path="/game" element={<TVScreen><Game /></TVScreen>} />
               <Route path="/seemore" element={<TVScreen><Seemore /></TVScreen>} />
             </Routes>
