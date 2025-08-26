@@ -34,7 +34,7 @@ export default function TVScreen({ children }) {
         </div>
         {/* Power/back button (center) */}
         <button onClick={() => navigate(-1)} className="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-57">
-          <div className="w-5 h-5 flex justify-center items-center bg-red-500 rounded-full shadow-[0_0_12px_rgba(239,68,68,0.85)]"></div>
+          <div className="w-5 h-5 flex justify-center items-center bg-green-400 rounded-full shadow-green-500"></div>
         </button>
       </div>
       {/* Stand */}

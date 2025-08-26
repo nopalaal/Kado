@@ -493,9 +493,9 @@ export default function CircularGallery({
     };
   }, [items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase]);
   return (
-    <div className="w-full h-[500px] flex flex-col items-center justify-center bg-purple-300 p-6 pt-8 pb-12">
+    <div className="w-full h-[500px] flex flex-col items-center justify-center bg-purple-300 p-6 pt-8 pb-12 overflow-hidden">
       <button
-        className="px-6 py-2 bg-pink-500 text-white rounded-lg shadow hover:bg-pink-600 transition "
+        className="px-6 py-2 -mt-5 bg-pink-500 text-white rounded-lg shadow hover:bg-pink-600 transition "
         onClick={() => navigate("/seemore")}
       >
        View more
