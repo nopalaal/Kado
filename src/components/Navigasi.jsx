@@ -10,6 +10,7 @@ export default function Navigasi(){
     <button className="p-2 m-2 bg-purple-200 rounded-xl"><Link to="/">Home</Link></button>
     <button className="p-2 m-2 bg-purple-200 rounded-xl"><Link to="/gallery">Gallery</Link></button>
     <button className="p-2 m-2 bg-purple-200 rounded-xl"><Link to="/surat">Surat</Link></button>
+    <button className="p-2 m-2 bg-purple-200 rounded-xl"><Link to="/game">Game</Link></button>
     
   </div>
 

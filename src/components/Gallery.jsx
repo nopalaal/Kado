@@ -1,5 +1,6 @@
 import { Camera, Mesh, Plane, Program, Renderer, Texture, Transform } from "ogl";
 import { useEffect, useRef, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 import memory1 from '../assets/memory1.png'
 import memory2 from '../assets/memory(21).jpeg'
@@ -13,6 +14,9 @@ import memory9 from '../assets/memory (10).jpeg'
 import memory10 from '../assets/memory (2).jpeg'
 import memory11 from '../assets/memory (6).jpeg'
 import memory12 from '../assets/memory(3).jpeg'
+
+
+
 function debounce(func, wait) {
   let timeout;
   return function (...args) {
@@ -478,33 +482,28 @@ export default function CircularGallery({
 }) {
   const containerRef = useRef(null);
   const [showGrid, setShowGrid] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const app = new App(containerRef.current, { items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase });
     return () => {
-        
+    
       app.destroy();
     };
   }, [items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase]);
   return (
-    <div className="w-full h-full overflow-hidden cursor-grab active:cursor-grabbing bg-purple-300" ref={containerRef}>
-      {!showGrid ? (
-        <button
-          className="px-6 py-2 bg-pink-500 text-white rounded-lg shadow hover:bg-pink-600 transition"
-          onClick={() => setShowGrid(true)}
-        >
-          View Gallery
-        </button>
-      ) : (
-        <div className="grid grid-cols-3 grid-rows-3 ">
-          {items.map(item => (
-            <div key={item.id} className={`bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center justify-center ${item.className}`}>
-              <img src={item.src} alt={item.title} className="object-cover w-full h-full" />
-              <div className="p-2 text-center text-black font-semibold">{item.title}</div>
-            </div>
-          ))}
-        </div>
-      )}
+    <div className="w-full h-[500px] flex flex-col items-center justify-center bg-purple-300">
+      <button
+        className="px-6 py-2 bg-pink-500 text-white rounded-lg shadow hover:bg-pink-600 transition "
+        onClick={() => navigate("/seemore")}
+      >
+       View more
+      </button>
+      <div
+        className="w-full h-full overflow-hidden cursor-grab active:cursor-grabbing"
+        ref={containerRef}
+      >
+      </div>
     </div>
   );
 }
