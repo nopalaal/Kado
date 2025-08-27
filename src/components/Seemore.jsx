@@ -24,9 +24,7 @@ const Seemore = () => {
   return (<>
   
     <div className='h-screen w-full flex flex-col items-center justify-center bg-purple-300 mt-5 p-6 pt-8 pb-12'>
-        
       <div className="grid h-full w-full grid-cols-6 grid-rows-3 gap-3 p-5 py-16 overflow-hidden ">
-        {/* <div className="col-span-1 row-span-1 bg-amber-100"></div> */}
         <div className="col-span-2 row-span-1 bg-amber-100"><img src={memory2} alt="" className="object-cover w-full h-full " /></div>
         <div className="col-span-1 row-span-1 bg-amber-100"><img src={memory4} alt="" className="object-cover w-full h-full " /></div>
         <div className="col-span-1 row-span-2 bg-amber-100"><img src={memory1} alt="" className="object-cover w-full h-full " /></div>

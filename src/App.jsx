@@ -12,17 +12,20 @@ import Surat from './components/Surat'
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom'
 import Waves from './components/Waves'
 import Seemore from './components/Seemore'
+import Museum from './components/Museum'
+import SecretVideo from './components/SecretVideo'
 function App() {
-  const [showSurprise, setShowSurprise] = useState(true);
-  const [isFading, setIsFading] = useState(false);
-  const [showMain, setShowMain] = useState(false);
+  const [showSurprise, setShowSurprise] = useState(false);
+  const [isFading, setIsFading] = useState(true);
+  const [showMain, setShowMain] = useState(true);
   const initialText = "Hello seng";
   const revealTexts = [
-    "kalo kamu liat ini tandanya apa...",
-    "iyaa betul sekali aku eh maksudnya kamu ultah hehe",
-    "Happy Birthday yaaaaaaa 🥳🥳🥳",
-    "Sehat selalu dan bisa menjadi melisa yang lebih baik lagii",
-    "Semoga kamu senang ama inii",
+    "",
+    // "kalo kamu liat ini tandanya apa...",
+    // "iyaa betul sekali aku eh maksudnya kamu ultah hehe",
+    // "Happy Birthday yaaaaaaa 🥳🥳🥳",
+    // "Sehat selalu dan bisa menjadi melisa yang lebih baik lagii",
+    // "Semoga kamu senang ama inii",
   
   ];
 
@@ -60,6 +63,8 @@ function App() {
               <Route path="/surat/:id" element={<TVScreen><Surat /></TVScreen>} />
               <Route path="/game" element={<TVScreen><Game /></TVScreen>} />
               <Route path="/seemore" element={<TVScreen><Seemore /></TVScreen>} />
+              <Route path="/museum" element={<TVScreen><Museum autoplay={true} pauseOnHover={true} /></TVScreen>} />
+              <Route path="/wawvideorahasia" element={<TVScreen><SecretVideo/></TVScreen>} />
             </Routes>
           </BrowserRouter>
         </div>

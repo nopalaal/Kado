@@ -30,6 +30,7 @@ export default function Navigasi(){
                     <div className="flex items-center gap-2 overflow-x-auto">
                         <Link to="/" className="shrink-0 h-9 px-4 rounded-full bg-zinc-800 hover:bg-zinc-700 active:scale-95 transition flex items-center justify-center text-xs">Home</Link>
                         <Link to="/gallery" className="shrink-0 h-9 px-4 rounded-full bg-zinc-800 hover:bg-zinc-700 active:scale-95 transition flex items-center justify-center text-xs">Gallery</Link>
+                        <Link to="/museum" className="shrink-0 h-9 px-4 rounded-full bg-zinc-800 hover:bg-zinc-700 active:scale-95 transition flex items-center justify-center text-xs">Museum</Link>
                         <Link to="/surat" className="shrink-0 h-9 px-4 rounded-full bg-zinc-800 hover:bg-zinc-700 active:scale-95 transition flex items-center justify-center text-xs">Surat</Link>
                         <Link to="/game" className="shrink-0 h-9 px-4 rounded-full bg-zinc-800 hover:bg-zinc-700 active:scale-95 transition flex items-center justify-center text-xs">Game</Link>
                     </div>

@@ -1,14 +1,20 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+import Waktu from "./waktu";
 
 export default function Home(){
     return(
-       
-        <div className="glitch bg-purple-300 w-full h-full flex flex-col items-center justify-center">
-
-        <h1 className="">Hai Manies</h1>
-        <p>rawr😋</p>
+        <div className="flex flex-col items-center">
+        <div className="glitch bg-purple-300 w-full flex flex-col items-center justify-center py-8">
+          <h1>Hai Manies</h1>
+          <p>rawr😋</p>
         </div>
+  
+     
+     <div className="text-sm translate-y-15">
+        <Waktu />
+     </div>
+      </div>
+        
        
     );
 }
