@@ -14,13 +14,14 @@ import Waves from './components/Waves'
 import Seemore from './components/Seemore'
 import Museum from './components/Museum'
 import SecretVideo from './components/SecretVideo'
+import Typewriter from 'typewriter-effect/dist/core';
 function App() {
-  const [showSurprise, setShowSurprise] = useState(false);
-  const [isFading, setIsFading] = useState(true);
-  const [showMain, setShowMain] = useState(true);
+  const [showSurprise, setShowSurprise] = useState(true);
+  const [isFading, setIsFading] = useState(false);
+  const [showMain, setShowMain] = useState(false);
   const initialText = "Hello seng";
   const revealTexts = [
-    "",
+    "testing",
     // "kalo kamu liat ini tandanya apa...",
     // "iyaa betul sekali aku eh maksudnya kamu ultah hehe",
     // "Happy Birthday yaaaaaaa 🥳🥳🥳",

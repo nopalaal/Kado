@@ -55,7 +55,7 @@ function Game(){
 
     return(
     <>
-        <div className="w-full h-full bg-pink-300 text-white p-4">
+        <div className="w-full min-h-screen bg-pink-300 text-white p-4">
             <div className="w-full max-w-md mx-auto">
             <h2 className="text-2xl font-semibold text-center">Game Suit Tangan</h2>
 
@@ -102,7 +102,7 @@ function Game(){
 
             {score.user >= 3 && (
                 <div className="mt-4 text-center">
-                    <p>fsd</p>
+                    <p>PW surat : DD-MM-YYYY</p>
                     <button
                         onClick={() => navigate("/wawvideorahasia")}
                         className="px-4 py-2 rounded bg-emerald-600 hover:bg-emerald-700 animate-pulse"

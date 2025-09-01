@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 export default function Navigasi(){
     const location = useLocation();
     const isSurat = location.pathname.startsWith('/surat');
-    const suratIds = ['1','2','3','4','5'];
+    const suratIds = ['1','2','3','4'];
     return(
         <>
         {/* Remote TV - horizontal bar centered under TV */}
