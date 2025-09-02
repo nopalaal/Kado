@@ -1,5 +1,5 @@
 import React from "react";
-import video from '../assets/video/testing.mp4'
+import video from '../assets/video/Secret.mp4'
 export default function SecretVideo() {
   // Ganti URL video di bawah sesuai kebutuhan (YouTube embed atau file MP4 publik)
   const videoSrc = video;

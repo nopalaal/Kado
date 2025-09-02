@@ -84,7 +84,7 @@ function Game(){
 
             <div className="mt-4 text-center">
                 <div className="text-xl font-medium">
-                    {result || "Pilih tanganmu untuk mulai"}
+                    {result || "Maenin 3 kali bakal unlock sesuatu"}
                 </div>
             </div>
 
