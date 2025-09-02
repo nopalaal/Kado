@@ -1,5 +1,5 @@
 import React from "react";
-import Waktu from "./waktu";
+
 
 export default function Home(){
     return(
@@ -11,7 +11,7 @@ export default function Home(){
   
      
      <div className="text-sm translate-y-15">
-        <Waktu />
+
      </div>
       </div>
         
