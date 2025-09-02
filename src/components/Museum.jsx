@@ -141,23 +141,23 @@ const Museum = ({
   }, [modalImage]);
 
   return (
-    <div className="glitch relative h-[500px] bg-pink-300 w-full overflow-hidden">
+    <div className="glitch relative h-[420px] sm:h-[500px] bg-pink-300 w-full overflow-hidden">
       <div
-        className="absolute top-0 left-0 h-full w-[48px] z-10"
+        className="absolute top-0 left-0 h-full w-[32px] sm:w-[48px] z-10"
         style={{
           background:
           "linear-gradient(to left, rgba(0,0,0,0) 0%, #060010 100%)",
         }}
       />
       <div
-        className="absolute top-0 right-0 h-full w-[48px] z-10"
+        className="absolute top-0 right-0 h-full w-[32px] sm:w-[48px] z-10"
         style={{
           background:
             "linear-gradient(to right, rgba(0,0,0,0) 0%, #060010 100%)",
         }}
       />
 
-              <div className="pointer-events-none absolute top-2 left-1/2 -translate-x-1/2 z-20 text-white text-3xl sm:text-5xl font-semibold">Your Hardworks</div>
+              <div className="pointer-events-none absolute top-2 left-1/2 -translate-x-1/2 z-20 text-white text-2xl sm:text-5xl font-semibold">Your Hardworks</div>
       <div className="flex h-full items-center justify-center [perspective:1000px] [transform-style:preserve-3d]">
         <motion.div
           drag="x"
@@ -189,9 +189,8 @@ const Museum = ({
                 src={url}
                 alt="gallery"
                 onClick={(e) => { e.stopPropagation(); setModalImage(url); }}
-                className="h-[120px] w-[300px] rounded-[15px] border-[3px] border-white object-cover cursor-zoom-in
-                           transition-transform duration-300 ease-out group-hover:scale-105
-                           sm:h-[100px] sm:w-[220px]"
+                className="h-[100px] w-[240px] sm:h-[120px] sm:w-[300px] rounded-[15px] border-[3px] border-white object-cover cursor-zoom-in
+                           transition-transform duration-300 ease-out group-hover:scale-105"
               />
             </div>
           ))}
@@ -200,10 +199,10 @@ const Museum = ({
 
       {modalImage && (
         <div
-          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-3 sm:p-4"
           onClick={() => setModalImage(null)}
         >
-          <div className="relative max-w-[90vw] max-h-[90vh]" onClick={(e) => e.stopPropagation()}>
+          <div className="relative max-w-[95vw] max-h-[90vh]" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setModalImage(null)}
               className="absolute -top-3 -right-3 bg-white text-black rounded-full w-10 h-10 flex items-center justify-center shadow"
@@ -214,7 +213,7 @@ const Museum = ({
             <img
               src={modalImage}
               alt="preview"
-              className="max-w-[90vw] max-h-[90vh] object-contain rounded"
+              className="max-w-[95vw] max-h-[90vh] object-contain rounded"
             />
           </div>
         </div>

@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 
-function Surat({ isAuthenticated, onAuthenticated }){
+function Surat(){
     const { id } = useParams();
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
@@ -11,9 +12,7 @@ function Surat({ isAuthenticated, onAuthenticated }){
     const handlePasswordSubmit = (e) => {
         e.preventDefault();
         if (password === correctPassword) {
-            if (typeof onAuthenticated === 'function') {
-                onAuthenticated();
-            }
+            setIsAuthenticated(true);
             setError('');
         } else {
             setError('Salahh wleeeeeeeeeee😝😝😝');

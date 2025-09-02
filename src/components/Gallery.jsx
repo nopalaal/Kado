@@ -373,10 +373,10 @@ class App {
       { image: memory14, text: "ada kucing" },
       { image: memory15, text: "kerja kelompok kayaknya" },
       { image: memory16, text: "lucu" },
-      { image: memory17, text: "foto kita hehe" },
-      { image: memory18, text: "foto kita hehe" },
-      { image: memory19, text: "foto kita hehe" },
-      { image: memory20, text: "foto kita hehe" },
+      { image: memory17, text: "mirror selfie" },
+      { image: memory18, text: "ini cantik bgt sihh aku gaboonh" },
+      { image: memory19, text: "cie pramuka" },
+      { image: memory20, text: "mirror selfie lagiee" },
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);
