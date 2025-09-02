@@ -18,7 +18,10 @@ import memory13 from '../assets/hape (3).jpeg'
 import memory14 from '../assets/gambar (4).jpeg'
 import memory15 from '../assets/gambar (5).jpeg'
 import memory16 from '../assets/gambar (12).jpeg'
-
+import memory17 from '../assets/foto (1).jpeg'
+import memory18 from '../assets/foto (2).jpeg'
+import memory19 from '../assets/foto (3).jpeg'
+import memory20 from '../assets/foto (4).jpeg'
 
 
 function debounce(func, wait) {
@@ -370,6 +373,10 @@ class App {
       { image: memory14, text: "ada kucing" },
       { image: memory15, text: "kerja kelompok kayaknya" },
       { image: memory16, text: "lucu" },
+      { image: memory17, text: "foto kita hehe" },
+      { image: memory18, text: "foto kita hehe" },
+      { image: memory19, text: "foto kita hehe" },
+      { image: memory20, text: "foto kita hehe" },
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -27,8 +27,18 @@ function App() {
     // "Happy Birthday yaaaaaaa 🥳🥳🥳",
     // "Sehat selalu dan bisa menjadi melisa yang lebih baik lagii",
     // "Semoga kamu senang ama inii",
-  
   ];
+
+  // Global auth state for Surat
+  const [suratAuthed, setSuratAuthed] = useState(false);
+  useEffect(() => {
+    const saved = localStorage.getItem('suratAuthenticated');
+    if (saved === 'true') setSuratAuthed(true);
+  }, []);
+  const handleSuratAuthed = () => {
+    setSuratAuthed(true);
+    localStorage.setItem('suratAuthenticated', 'true');
+  };
 
   const handleFinish = () => {
     
@@ -60,8 +70,8 @@ function App() {
             <Routes>
               <Route path="/" element={<TVScreen><Home /></TVScreen>} />
               <Route path="/gallery" element={<TVScreen><Gallery bend={2} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} /></TVScreen>} />
-              <Route path="/surat" element={<TVScreen><Surat /></TVScreen>} />
-              <Route path="/surat/:id" element={<TVScreen><Surat /></TVScreen>} />
+              <Route path="/surat" element={<TVScreen><Surat isAuthenticated={suratAuthed} onAuthenticated={handleSuratAuthed} /></TVScreen>} />
+              <Route path="/surat/:id" element={<TVScreen><Surat isAuthenticated={suratAuthed} onAuthenticated={handleSuratAuthed} /></TVScreen>} />
               <Route path="/game" element={<TVScreen><Game /></TVScreen>} />
               <Route path="/seemore" element={<TVScreen><Seemore /></TVScreen>} />
               <Route path="/museum" element={<TVScreen><Museum autoplay={true} pauseOnHover={true} /></TVScreen>} />

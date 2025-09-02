@@ -128,6 +128,18 @@ const Museum = ({
     }
   };
 
+  // Modal state and handlers
+  const [modalImage, setModalImage] = useState(null);
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === 'Escape') setModalImage(null);
+    };
+    if (modalImage) {
+      window.addEventListener('keydown', onKey);
+    }
+    return () => window.removeEventListener('keydown', onKey);
+  }, [modalImage]);
+
   return (
     <div className="glitch relative h-[500px] bg-pink-300 w-full overflow-hidden">
       <div
@@ -162,7 +174,7 @@ const Museum = ({
             width: cylinderWidth,
             transformStyle: "preserve-3d",
           }}
-          className="flex min-h-[200px] cursor-grab items-center justify-center [transform-style:preserve-3d]"
+          className="flex min-h[200px] cursor-grab items-center justify-center [transform-style:preserve-3d]"
         >
           {images.map((url, i) => (
             <div
@@ -170,14 +182,14 @@ const Museum = ({
               className="group absolute flex h-fit items-center justify-center p-[8%] [backface-visibility:hidden] md:p-[6%]"
               style={{
                 width: `${faceWidth}px`,
-                transform: `rotateY(${(360 / faceCount) * i
-                  }deg) translateZ(${radius}px)`,
+                transform: `rotateY(${(360 / faceCount) * i}deg) translateZ(${radius}px)`,
               }}
             >
               <img
                 src={url}
                 alt="gallery"
-                className="pointer-events-none h-[120px] w-[300px] rounded-[15px] border-[3px] border-white object-cover
+                onClick={(e) => { e.stopPropagation(); setModalImage(url); }}
+                className="h-[120px] w-[300px] rounded-[15px] border-[3px] border-white object-cover cursor-zoom-in
                            transition-transform duration-300 ease-out group-hover:scale-105
                            sm:h-[100px] sm:w-[220px]"
               />
@@ -185,6 +197,28 @@ const Museum = ({
           ))}
         </motion.div>
       </div>
+
+      {modalImage && (
+        <div
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+          onClick={() => setModalImage(null)}
+        >
+          <div className="relative max-w-[90vw] max-h-[90vh]" onClick={(e) => e.stopPropagation()}>
+            <button
+              onClick={() => setModalImage(null)}
+              className="absolute -top-3 -right-3 bg-white text-black rounded-full w-10 h-10 flex items-center justify-center shadow"
+              aria-label="Close"
+            >
+              ✕
+            </button>
+            <img
+              src={modalImage}
+              alt="preview"
+              className="max-w-[90vw] max-h-[90vh] object-contain rounded"
+            />
+          </div>
+        </div>
+      )}
       
     </div>
   );
